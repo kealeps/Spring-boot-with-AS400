@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-SpringBootWithAs400Application<spring-boot-with-as400>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.springbootwithas400.SpringBootWithAs400Application",
+            "projectName": "spring-boot-with-as400",
+            "args": ""
+        }
+    ]
+}
