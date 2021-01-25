@@ -24,7 +24,7 @@ public class PersonaController {
     @Autowired
     public IPersonaService personaService;
 
-    @GetMapping("/listar")
+    @GetMapping("/")
     public List<Persona> findAll() {
         return personaService.findAll();
     }
@@ -46,10 +46,10 @@ public class PersonaController {
         personaService.delete(id);
     }
 
-    @PutMapping("/{persona}")
+    @PutMapping("/update")
     @ResponseStatus(HttpStatus.CREATED)
-    public Persona update(@RequestBody Persona persona, @PathVariable String id) {
-        Persona currentPersona = personaService.findById(id);
+    public Persona update(@RequestBody Persona persona) {
+        Persona currentPersona = personaService.findById(persona.getId());
 
         currentPersona.setNombre(persona.getNombre());
         currentPersona.setApellido(persona.getApellido());
