@@ -17,19 +17,16 @@ public class PersonaServiceImpl implements IPersonaService {
 
     @Override
     public List<Persona> findAll() {
-
         return (List<Persona>) personaDao.findAll();
     }
 
     @Override
     public Persona findById(String id) {
-
         return personaDao.findById(id).orElse(null);
     }
 
     @Override
     public Persona save(Persona persona) {
-
         return personaDao.save(persona);
     }
 
@@ -39,6 +36,4 @@ public class PersonaServiceImpl implements IPersonaService {
 
     }
 
-  
-    
 }

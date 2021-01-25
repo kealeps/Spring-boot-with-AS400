@@ -11,22 +11,21 @@ import lombok.ToString;
 @Data
 @ToString
 @Entity
-@Table(schema="BANAMO77", name = "PERSONA")
+@Table(schema = "BANAMO77", name = "PERSONA")
 public class Persona {
-    
+
     @Id
     @Column(name = "ID_PERSONA")
     private String id;
-    
+
     @Column(name = "NOMBRE")
     private String nombre;
-    
+
     @Column(name = "APELLIDO")
     private String apellido;
 
     @Column(name = "EMAIL")
     private String email;
-
 
     @Column(name = "TELEFONO")
     private String telefono;

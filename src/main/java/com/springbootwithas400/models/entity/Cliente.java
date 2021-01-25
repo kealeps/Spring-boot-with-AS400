@@ -1,5 +1,7 @@
 package com.springbootwithas400.models.entity;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -11,20 +13,21 @@ import lombok.ToString;
 @Data
 @ToString
 @Entity
-@Table(schema="BANCYFILES", name = "CUMST")
-public class Cliente {
-    
+@Table(schema = "BANCYFILES", name = "CUMST")
+public class Cliente implements Serializable {
+
     @Id
-    @Column(name ="CUSCUN")
+    @Column(name = "CUSCUN")
     private String id;
 
-    @Column(name ="CUSNA1")
+    @Column(name = "CUSNA1")
     private String nombre;
 
-    @Column(name ="CUSIDN")
+    @Column(name = "CUSIDN")
     private String cedula;
 
-    @Column(name ="CUSIAD")
+    @Column(name = "CUSIAD")
     private String correo;
 
+    private static final long serialVersionUID = 1L;
 }

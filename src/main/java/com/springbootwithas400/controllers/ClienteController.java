@@ -12,18 +12,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api")
 public class ClienteController {
-    
+
     @Autowired
     private IClienteService clienteService;
 
     @GetMapping("/cliente/{cedula}")
-   public Cliente findByCedula(@PathVariable String cedula){
+    public Cliente findByCedula(@PathVariable String cedula) {
+        return clienteService.findByCedula(cedula);
+    }
 
-    return clienteService.findByCedula(cedula);
-   }
-
-   @GetMapping("/hola")
-   public String Hola(){
-       return "hola";
-   }
+    @GetMapping("/hola")
+    public String Hola() {
+        return "hola";
+    }
 }
